@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-canvas text-ink antialiased;
+}
+
+/* Liens et transitions douces par défaut */
+a {
+  @apply transition-colors duration-200;
+}
+
+/* Conteneur centré réutilisable */
+.container-art {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+/* Titre de section en serif avec filet doré */
+.section-title {
+  @apply font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl;
+}
+
+/* Effet de soulignement doré */
+.gold-rule {
+  @apply mx-auto mt-4 h-px w-16 bg-gold;
+}
+
+/* Boutons */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+.btn-primary {
+  @apply bg-ink text-canvas hover:bg-stone-800;
+}
+.btn-outline {
+  @apply border border-stone-300 bg-transparent text-ink hover:border-ink;
+}
+.btn-whatsapp {
+  @apply bg-[#25D366] text-white hover:bg-[#1ebe57];
+}
+
+/* Champs de formulaire */
+.field {
+  @apply w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-sm text-ink outline-none transition focus:border-ink focus:ring-1 focus:ring-ink;
+}
+.label {
+  @apply mb-1.5 block text-sm font-medium text-stone-700;
+}
+
+/* Masquer la barre de défilement horizontale décorative */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
